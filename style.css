@@ -1,21 +1,33 @@
+.board {
+	width: 50%;
+	height: 50%;
+	border: 1px solid black;
+	align: center;
+	margin: 0px;
+}
+
+.row {
+	width: 50%;
+	height: 50%;
+	background: black;
+	margin: 0px;
+}
+
 .black {
 	width: 10%;
 	height: 10%;
+	border: 1px solid black;
 	background-color: black;
+	margin: 0px;
 }
 
 .red {
 	width: 10%;
 	height: 10%;
+	border: 1px solid black;
 	background-color: gray;
+	margin: 0px;
 }
 
-.board {
-	width: 50%;
-	height: 50%;
-	align: center;
-}
 
-.row {
-	
-}
+
