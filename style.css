@@ -1,0 +1,21 @@
+.black {
+	width: 10%;
+	height: 10%;
+	background-color: black;
+}
+
+.red {
+	width: 10%;
+	height: 10%;
+	background-color: gray;
+}
+
+.board {
+	width: 50%;
+	height: 50%;
+	align: center;
+}
+
+.row {
+	
+}
