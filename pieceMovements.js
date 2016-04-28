@@ -30,4 +30,4 @@ var selectedSpace;
 		console.log("this :", this); 
 		console.log("selectedPiece :", selectedPiece); 
 	})
-
+});
