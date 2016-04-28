@@ -19,15 +19,20 @@ var selectedSpace;
 
 
 		// want to check if the selectedPiece can move to the selectedSpace. 
-		// if the selectedPieces SPACE - selectedSpace is = 10, then it can move. 
-
 		if (this.children.length > 0) {
 			selectedPiece = this.children[0];
 			//sets the pieceSpace so that it can be compared to selected space
 			piecesSpace = $(selectedPiece).parent()[0];
 			piecesSpace = $(piecesSpace).attr('class').split(' ')[1]; 
 		} 
+
+		// if the selectedPieces SPACE - selectedSpace is = 10, then it can move. 
+		if (Math.abs(piecesSpace - selectedSpace) === 10){
+			$(this).append(selectedPiece);
+			console.log("Moved")
+		}
 		console.log("this :", this); 
-		console.log("selectedPiece :", selectedPiece); 
+		console.log("selectedPiece :", selectedPiece);
+		console.log("selectedSpace :", selectedSpace); 
 	})
 });
