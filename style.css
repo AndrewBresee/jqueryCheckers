@@ -22,6 +22,14 @@
 	height: 10%;
 	background-color: white;
 }
+.redP {
+	width: 50%;
+	height: 50%;
+	border-radius: 50%; 
+	border-color: black;
+	background: red;
+	margin: 0 auto; 
+}
 
 
 

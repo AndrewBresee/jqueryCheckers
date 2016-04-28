@@ -7,13 +7,15 @@ $(document).ready(function() {
 //   var html = $.parseHTML(pieceOne);
 // // Append the parsed HTML
 
-	
+var selectedPiece; 
 
 
 	$('.white').click(function(){
-		console.log(this)
-		$("<p>Test</p>").appendTo(this);
-	
+		if (this.children.length > 0) {
+			selectedPiece = this.children[0];  
+		} 
+		console.log("this :", this); 
+		console.log("selectedPiece :", selectedPiece); 
 	})
 
 	$('.black').click(function(){
