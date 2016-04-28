@@ -8,17 +8,38 @@ $(document).ready(function() {
 // // Append the parsed HTML
 
 var selectedPiece; 
+var piecesSpace; 
+var selectedSpace; 
 
 
 	$('.white').click(function(){
+		// finds the class of the selected item
+		// will be useful for when deciding if piece can be moved around 
+		selectedSpace = $(this).attr('class').split(' ')[1];
+
+
+		// want to check if the selectedPiece can move to the selectedSpace. 
+		// if the selectedPieces SPACE - selectedSpace is = 10, then it can move. 
+
 		if (this.children.length > 0) {
-			selectedPiece = this.children[0];  
+			selectedPiece = this.children[0];
+			//sets the pieceSpace so that it can be compared to selected space
+			piecesSpace = $(selectedPiece).parent()[0];
+			piecesSpace = $(piecesSpace).attr('class').split(' ')[1];
+			console.log("piecesSpace: ", piecesSpace)  
 		} 
 		console.log("this :", this); 
 		console.log("selectedPiece :", selectedPiece); 
 	})
 
 	$('.black').click(function(){
-		console.log(this)
+		selectedSpace = $(this).attr('class').split(' ')[1];
+
+		console.log(" selectedSpace: ", selectedSpace);
+		if (this.children.length > 0) {
+			selectedPiece = this.children[0];  
+		} 
+		console.log("this :", this); 
+		console.log("selectedPiece :", selectedPiece); 
 	})
 });
