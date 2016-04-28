@@ -12,7 +12,7 @@ var piecesSpace;
 var selectedSpace; 
 
 
-	$('td').click(function(){
+	$('td').click(function(e){
 		// finds the class of the selected item
 		// will be useful for when deciding if piece can be moved around 
 		selectedSpace = $(this).attr('class').split(' ')[1];
@@ -31,6 +31,7 @@ var selectedSpace;
 			$(this).append(selectedPiece);
 			console.log("Moved")
 		}
+		
 		console.log("this :", this); 
 		console.log("selectedPiece :", selectedPiece);
 		console.log("selectedSpace :", selectedSpace); 
