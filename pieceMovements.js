@@ -42,16 +42,20 @@ var turn = true;
 					$(this).append(selectedPiece).animate();
 					console.log("Moved")
 					// changes turn 
-					turn = !turn
+					turn = false; 
 				}
 			}
 		} else {
-			if ($(selectedPiece).attr('class').split(' ')[0] === 'backP') {
+			if ($(selectedPiece).attr('class').split(' ')[0] === 'blackP') {
+				console.log("Selected black piece to move")
 				if (piecesSpace - selectedSpace === 10) {
+					console.log("Black piece can move to this spot")
 					$(this).append(selectedPiece).animate();
 					console.log("Moved")
 					// changes turn 
-					turn = !turn
+					turn = true;
+				} else {
+					console.log("Wrong Direction!")
 				}
 			}
 		}
